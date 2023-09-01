@@ -75,8 +75,8 @@ export default class level1 extends Phaser.Scene
             
             this.load.atlas(
                 'walker',
-                './src/assets/Anim/walker.png',
-                './src/assets/Anim/walker.json'
+                './src/assets/Anim/walker/newwalker.png',
+                './src/assets/Anim/walker/newwalker.json'
               )
             this.gameWidth = this.sys.game.canvas.width
             this.gameHeight = this.sys.game.canvas.height
@@ -136,7 +136,7 @@ export default class level1 extends Phaser.Scene
         this.background = this.add.image(this.centreX, this.centreY, 'background')
    
         const frameNames = this.anims.generateFrameNames('walker', {
-            start: 1, end: 7, zeroPad: 5,
+            start: 0, end: 7, zeroPad: 5,
             prefix: 'pim_okido_trolley_split_', suffix: '.png'
         })
         this.anims.create({ key: 'walk', frames: frameNames, frameRate: 7, repeat: 10 })
@@ -145,7 +145,7 @@ export default class level1 extends Phaser.Scene
         // this.basket = this.add.image(0, 0, 'basket').setScale(1)
 
         // this.basket = this.add.sprite(0, 0, 'walkingMessy')
-        this.basket = this.add.sprite(1500, 400, 'walker', 'pim_okido_trolley_split_00003.png')
+        this.basket = this.add.sprite(525, 225, 'walker', 'pim_okido_trolley_split_00003.png')
 
         // this.basket.anims.play('walkon')
 
@@ -538,10 +538,12 @@ export default class level1 extends Phaser.Scene
     // Basket
     this.basket
     .setDepth(20)
-    .setScale(scale*3.6)
-    .setPosition(cX+410*scale, 365*scale)
-    //   .setScale(scale*1.5)
-    //   .setPosition(cX+380*scale, 380*scale)
+    //     .setScale(scale*1.5)
+    // .setPosition(cX+410*scale, 365*scale)
+    // .setScale(scale*3.6)
+    // .setPosition(cX+410*scale, 365*scale)
+      .setScale(scale*1.6)
+      .setPosition(cX+380*scale, 380*scale)
 
     //List
     this.list
@@ -646,7 +648,7 @@ export default class level1 extends Phaser.Scene
           b.x - b.displayWidth / 2,
           b.y - b.displayHeight / 2,
           b.displayWidth,
-          b.displayHeight
+          b.displayHeight 
         );
 
 

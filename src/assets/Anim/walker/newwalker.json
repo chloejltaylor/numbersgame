@@ -1,7 +1,7 @@
 {"frames": [
 
 {
-	"filename": "pim_okido_trolley_split_00010.png",
+	"filename": "pim_okido_trolley_split_00000.png",
 	"frame": {"x":1,"y":881,"w":455,"h":300},
 	"rotated": false,
 	"trimmed": true,
@@ -10,7 +10,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "pim_okido_trolley_split_00013.png",
+	"filename": "pim_okido_trolley_split_00001.png",
 	"frame": {"x":1,"y":290,"w":460,"h":294},
 	"rotated": false,
 	"trimmed": true,
@@ -19,7 +19,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "pim_okido_trolley_split_00017.png",
+	"filename": "pim_okido_trolley_split_00002.png",
 	"frame": {"x":1,"y":1,"w":464,"h":287},
 	"rotated": false,
 	"trimmed": true,
@@ -28,7 +28,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "pim_okido_trolley_split_00020.png",
+	"filename": "pim_okido_trolley_split_00003.png",
 	"frame": {"x":1,"y":586,"w":466,"h":293},
 	"rotated": false,
 	"trimmed": true,
@@ -37,7 +37,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "pim_okido_trolley_split_00024.png",
+	"filename": "pim_okido_trolley_split_00004.png",
 	"frame": {"x":458,"y":886,"w":467,"h":299},
 	"rotated": false,
 	"trimmed": true,
@@ -46,7 +46,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "pim_okido_trolley_split_00029.png",
+	"filename": "pim_okido_trolley_split_00005.png",
 	"frame": {"x":463,"y":295,"w":465,"h":289},
 	"rotated": false,
 	"trimmed": true,
@@ -55,7 +55,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "pim_okido_trolley_split_00033.png",
+	"filename": "pim_okido_trolley_split_00006.png",
 	"frame": {"x":467,"y":1,"w":462,"h":292},
 	"rotated": false,
 	"trimmed": true,
@@ -64,7 +64,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "pim_okido_trolley_split_00036.png",
+	"filename": "pim_okido_trolley_split_00007.png",
 	"frame": {"x":469,"y":586,"w":457,"h":298},
 	"rotated": false,
 	"trimmed": true,
@@ -75,10 +75,10 @@
 "meta": {
 	"app": "https://www.codeandweb.com/texturepacker",
 	"version": "1.0",
-	"image": "pim_okido_trolley_sprite_sheet_long-0.png",
+	"image": "newwalker.png",
 	"format": "RGBA8888",
 	"size": {"w":930,"h":1186},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:840da6c564aadd78bc4fd55bca7d83b9:06b7d6367cf582cab6e7239f4083e1cf:0260e8af8c199ae4299d96f95fcfac01$"
+	"smartupdate": "$TexturePacker:SmartUpdate:865240120679007d54ed7a0d877f9a67:06b7d6367cf582cab6e7239f4083e1cf:af621c24fdd470fa5782379a0946593c$"
 }
 }
