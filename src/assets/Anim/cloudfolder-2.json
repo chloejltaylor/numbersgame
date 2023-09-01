@@ -1,0 +1,173 @@
+{"frames": {
+
+"pim_okido_cloud_rain_00017.png":
+{
+	"frame": {"x":931,"y":637,"w":463,"h":243},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":15,"y":79,"w":463,"h":243},
+	"sourceSize": {"w":500,"h":900}
+},
+"pim_okido_cloud_rain_00018.png":
+{
+	"frame": {"x":466,"y":696,"w":463,"h":243},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":15,"y":79,"w":463,"h":243},
+	"sourceSize": {"w":500,"h":900}
+},
+"pim_okido_cloud_rain_00019.png":
+{
+	"frame": {"x":931,"y":882,"w":463,"h":243},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":15,"y":79,"w":463,"h":243},
+	"sourceSize": {"w":500,"h":900}
+},
+"pim_okido_cloud_rain_00020.png":
+{
+	"frame": {"x":1,"y":735,"w":463,"h":243},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":15,"y":79,"w":463,"h":243},
+	"sourceSize": {"w":500,"h":900}
+},
+"pim_okido_cloud_rain_00021.png":
+{
+	"frame": {"x":466,"y":941,"w":463,"h":243},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":15,"y":79,"w":463,"h":243},
+	"sourceSize": {"w":500,"h":900}
+},
+"pim_okido_cloud_rain_00022.png":
+{
+	"frame": {"x":931,"y":1127,"w":463,"h":243},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":15,"y":79,"w":463,"h":243},
+	"sourceSize": {"w":500,"h":900}
+},
+"pim_okido_cloud_rain_00023.png":
+{
+	"frame": {"x":1,"y":980,"w":463,"h":243},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":15,"y":79,"w":463,"h":243},
+	"sourceSize": {"w":500,"h":900}
+},
+"pim_okido_cloud_rain_00024.png":
+{
+	"frame": {"x":466,"y":1186,"w":463,"h":243},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":15,"y":79,"w":463,"h":243},
+	"sourceSize": {"w":500,"h":900}
+},
+"pim_okido_cloud_rain_00025.png":
+{
+	"frame": {"x":931,"y":1372,"w":463,"h":243},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":15,"y":79,"w":463,"h":243},
+	"sourceSize": {"w":500,"h":900}
+},
+"pim_okido_cloud_rain_00026.png":
+{
+	"frame": {"x":931,"y":1372,"w":463,"h":243},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":15,"y":79,"w":463,"h":243},
+	"sourceSize": {"w":500,"h":900}
+},
+"pim_okido_cloud_rain_00027.png":
+{
+	"frame": {"x":931,"y":1372,"w":463,"h":243},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":15,"y":79,"w":463,"h":243},
+	"sourceSize": {"w":500,"h":900}
+},
+"pim_okido_cloud_rain_00028.png":
+{
+	"frame": {"x":1,"y":1225,"w":463,"h":243},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":15,"y":79,"w":463,"h":243},
+	"sourceSize": {"w":500,"h":900}
+},
+"pim_okido_cloud_rain_00035.png":
+{
+	"frame": {"x":931,"y":1,"w":463,"h":634},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":15,"y":79,"w":463,"h":634},
+	"sourceSize": {"w":500,"h":900}
+},
+"pim_okido_cloud_rain_00036.png":
+{
+	"frame": {"x":466,"y":1,"w":463,"h":693},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":15,"y":79,"w":463,"h":693},
+	"sourceSize": {"w":500,"h":900}
+},
+"pim_okido_cloud_rain_00038.png":
+{
+	"frame": {"x":1,"y":1,"w":463,"h":732},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":15,"y":79,"w":463,"h":732},
+	"sourceSize": {"w":500,"h":900}
+},
+"pim_okido_cloud_rain_00054.png":
+{
+	"frame": {"x":466,"y":1431,"w":463,"h":243},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":15,"y":79,"w":463,"h":243},
+	"sourceSize": {"w":500,"h":900}
+},
+"pim_okido_cloud_rain_00055.png":
+{
+	"frame": {"x":931,"y":1617,"w":463,"h":243},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":15,"y":79,"w":463,"h":243},
+	"sourceSize": {"w":500,"h":900}
+},
+"pim_okido_cloud_rain_00056.png":
+{
+	"frame": {"x":1,"y":1470,"w":463,"h":243},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":15,"y":79,"w":463,"h":243},
+	"sourceSize": {"w":500,"h":900}
+},
+"pim_okido_cloud_rain_00057.png":
+{
+	"frame": {"x":466,"y":1676,"w":463,"h":243},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":15,"y":79,"w":463,"h":243},
+	"sourceSize": {"w":500,"h":900}
+},
+"pim_okido_cloud_rain_00058.png":
+{
+	"frame": {"x":1,"y":1715,"w":463,"h":243},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":15,"y":79,"w":463,"h":243},
+	"sourceSize": {"w":500,"h":900}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "cloudfolder-2.png",
+	"format": "RGBA8888",
+	"size": {"w":1395,"h":1959},
+	"scale": "1",
+	"related_multi_packs": [ "cloudfolder-0.json", "cloudfolder-1.json" ],
+	"smartupdate": "$TexturePacker:SmartUpdate:f1c92b77206d77ebf5c9b8f0957b256c:bd3ea989b98ed1fd3a16bcb9760eda2b:bd6f848fcd6a909ca732f20e0410bb43$"
+}
+}
