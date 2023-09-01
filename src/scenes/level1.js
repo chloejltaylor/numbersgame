@@ -73,22 +73,22 @@ export default class level1 extends Phaser.Scene
         {
             this.scene.run('music')
             
-            // this.load.atlas(
-            //     'cloud',
-            //     './src/assets/Anim/cloud/cloud.png',
-            //     './src/assets/Anim/cloud/cloud.json'
-            //   )
+            this.load.atlas(
+                'walker',
+                './src/assets/Anim/walker.png',
+                './src/assets/Anim/walker.json'
+              )
             this.gameWidth = this.sys.game.canvas.width
             this.gameHeight = this.sys.game.canvas.height
 
         
 
             
-              this.load.atlas(
-                'cloudbig',
-                './src/assets/Anim/cloud/cloudbig-1.png',
-                './src/assets/Anim/cloud/cloudbig-1.json'
-              )
+            //   this.load.atlas(
+            //     'cloudbig',
+            //     './src/assets/Anim/cloud/cloudbig-1.png',
+            //     './src/assets/Anim/cloud/cloudbig-1.json'
+            //   )
 
             //   this.load.multiatlas(
             //     'cloudbig',
@@ -102,12 +102,12 @@ export default class level1 extends Phaser.Scene
     create()
     {
 
-        this.anims.create({
-            key: 'walk',
-            frames: this.anims.generateFrameNumbers('walkingMessy', { start: 0, end: 5 }),
-            frameRate: 4,
-            repeat: 2
-        });
+        // this.anims.create({
+        //     key: 'walk',
+        //     frames: this.anims.generateFrameNumbers('walkingMessy', { start: 0, end: 5 }),
+        //     frameRate: 4,
+        //     repeat: 2
+        // });
 
         
 
@@ -134,41 +134,25 @@ export default class level1 extends Phaser.Scene
 
 
         this.background = this.add.image(this.centreX, this.centreY, 'background')
+   
+        const frameNames = this.anims.generateFrameNames('walker', {
+            start: 1, end: 7, zeroPad: 5,
+            prefix: 'pim_okido_trolley_split_', suffix: '.png'
+        })
+        this.anims.create({ key: 'walk', frames: frameNames, frameRate: 7, repeat: 10 })
+        // this.anims.create({ key: 'walkon', frames: frameNames, frameRate: 7, repeat: 2 })
 
         // this.basket = this.add.image(0, 0, 'basket').setScale(1)
 
-        this.basket = this.add.sprite(0, 0, 'walkingMessy')
+        // this.basket = this.add.sprite(0, 0, 'walkingMessy')
+        this.basket = this.add.sprite(1500, 400, 'walker', 'pim_okido_trolley_split_00003.png')
 
-
-        // this.background2 = this.add.image(this.centreX, this.centreY, 'background')
-
-        // this.cloud = this.add.sprite(1500, 400, 'cloud', 'pim_okido_cloud_rain_00000.png')
-        // const frameNames = this.anims.generateFrameNames('cloud', {
-        //     start: 0, end: 44, zeroPad: 5,
-        //     prefix: 'pim_okido_cloud_rain_', suffix: '.png'
-        // })
-
-        // this.cloudbig = this.add.sprite(1500, 400, 'cloudbig', 'pim_okido_cloud_rain_00000.png')
-        // const frameNames = this.anims.generateFrameNames('cloudbig', {
-        //     start: 0, end: 17, zeroPad: 5,
-        //     prefix: 'pim_okido_cloud_rain_', suffix: '.png'
-        // })
-
-        // this.anims.create({ key: 'rain', frames: frameNames, frameRate: 10, repeat: -1 })
-        // this.cloudbig.anims.play('rain')
-    
+        // this.basket.anims.play('walkon')
 
 
 
 
 
-
-        
-    //    for(let i=0; i<9; i++){
-    //         this.itemsInBasket1[i]=
-    //             this.add.image(x1[i], y1[i], 'spritesheet', this.shoppingListL1[this.sublevel]+'.png')
-            
-    //     }
 
  //select the first and second numbers
 
@@ -209,11 +193,22 @@ export default class level1 extends Phaser.Scene
 
         this.questionIcon.on('pointerdown', () => {
             if(this.numcorrect==this.total){
+                this.sound.play('celebrate')
                 this.questionIcon.setTexture('spritesheet', 'questionYes.png')
                 this.time.delayedCall(1500, this.startNewSublevel, [], this)
+                if(this.sublevel==0){
+                    this.item1.setTexture('spritesheet', 'questionYes.png')
+                }
+                if(this.sublevel==1){
+                    this.item2.setTexture('spritesheet', 'questionYes.png')
+                }
+                if(this.sublevel==2){
+                    this.item3.setTexture('spritesheet', 'questionYes.png')
+                }
 
             } else {
                 this.questionIcon.setTexture('spritesheet','questionNo.png')
+                this.sound.play('incorrect')
                 this.time.delayedCall(1500, returntoNeutral, [], this)
                 function returntoNeutral(){
                     this.questionIcon.setTexture('spritesheet', 'question.png')
@@ -385,7 +380,76 @@ export default class level1 extends Phaser.Scene
            
             let continueButton = this.add.image(525, 225, 'continue').setInteractive().setDepth(102)
             this.sound.play('win')
-            this.basket.anims.play('walk', false)
+            this.basket.anims.play('walk')
+            this.tweens.add({
+                targets: this.basket,
+                props: {
+                    x: { value:this.basket.x+ this.basketDestination, duration: 10000 }
+
+                },
+                ease: 'Sine.easeInOut',
+            })
+
+            for(let i=0; i<9; i++){
+
+                if( this.shoppingItem1[i].inbasket)
+                {
+                    this.tweens.add({
+                        targets: [this.shoppingItem1[i]],
+                        props: {
+                            x: { value: this.shoppingItem1[i].x+this.basketDestination, duration: 10000 }
+    
+                        },
+                        ease: 'Sine.easeInOut',
+                    })
+                }
+                if( this.shoppingItem2[i].inbasket)
+                {
+                    this.tweens.add({
+                        targets: [this.shoppingItem2[i]],
+                        props: {
+                            x: { value:this.shoppingItem2[i].x+this.basketDestination, duration: 10000 }
+    
+                        },
+                        ease: 'Sine.easeInOut',
+                    })
+                }
+                if( this.shoppingItem3[i].inbasket)
+                {
+                    this.tweens.add({
+                        targets: [this.shoppingItem3[i]],
+                        props: {
+                            x: { value: this.shoppingItem3[i].x+this.basketDestination, duration: 10000 }
+    
+                        },
+                        ease: 'Sine.easeInOut',
+                    })
+                }
+                if( this.shoppingItem4[i].inbasket)
+                {
+                    this.tweens.add({
+                        targets: [this.shoppingItem4[i]],
+                        props: {
+                            x: { value:this.shoppingItem4[i].x+this.basketDestination, duration: 10000 }
+    
+                        },
+                        ease: 'Sine.easeInOut',
+                    })
+                }
+                if( this.shoppingItem5[i].inbasket)
+                {
+                    this.tweens.add({
+                        targets: [this.shoppingItem5[i]],
+                        props: {
+                            x: { value:this.shoppingItem5[i].x+this.basketDestination, duration: 10000 }
+    
+                        },
+                        ease: 'Sine.easeInOut',
+                    })
+                }
+
+            }
+
             continueButton.once('pointerdown', () => {
                 if(this.level==0){
                     
@@ -470,32 +534,34 @@ export default class level1 extends Phaser.Scene
     // Bg
     this.background.setScale(scale).setPosition(cX, cY);
 
-
+    this.basketPosition = (cX+410*scale, 365*scale)
     // Basket
     this.basket
-    .setScale(scale*2)
-    .setPosition(cX+290*scale, 420*scale)
+    .setDepth(20)
+    .setScale(scale*3.6)
+    .setPosition(cX+410*scale, 365*scale)
     //   .setScale(scale*1.5)
     //   .setPosition(cX+380*scale, 380*scale)
 
     //List
     this.list
+    .setDepth(150)
     .setScale(scale*1.7)
     .setPosition(cX-400*scale, 550*scale)
 
     this.item1
     .setScale(scale*0.8)
-    .setDepth(1)
+    .setDepth(151)
     .setPosition(cX-400*scale, 350*scale)
 
     this.item2
-    .setDepth(1)
+    .setDepth(151)
     .setScale(scale*0.8)
     .setPosition(cX-300*scale, 350*scale)
 
     this.item3
     .setScale(scale*0.8)
-    .setDepth(1)
+    .setDepth(151)
     .setPosition(cX-200*scale, 350*scale)
 
 
@@ -538,38 +604,39 @@ export default class level1 extends Phaser.Scene
         .setPosition(cX+(this.startX5*scale), (800)*scale)
     }
     this.currentItem
+    .setDepth(151)
     .setScale(scale*0.7)
-    .setPosition(cX-465*scale, 550*scale)
+    .setPosition(cX-465*scale, 500*scale)
 
     this.firstNumber
-    .setDepth(100)
+    .setDepth(151)
     .setScale(scale*1.2)
-    .setPosition(cX-420*scale, 550*scale)
+    .setPosition(cX-420*scale, 500*scale)
 
     this.addsymbol
-    .setDepth(100)
+    .setDepth(151)
     .setScale(scale*0.7)
-    .setPosition(cX-370*scale, 550*scale)
+    .setPosition(cX-370*scale, 500*scale)
 
     this.secondNumber
-    .setDepth(100)
+    .setDepth(151)
     .setScale(scale*1.2)
-    .setPosition(cX-320*scale, 550*scale)
+    .setPosition(cX-320*scale, 500*scale)
 
     this.answerbox
-    .setDepth(100)
+    .setDepth(151)
     .setScale(scale*0.7)
-    .setPosition(cX-240*scale, 550*scale)
+    .setPosition(cX-240*scale, 500*scale)
 
     this.currentAnswer
-    .setDepth(100)
+    .setDepth(151)
     .setScale(scale*1.2)
-    .setPosition(cX-220*scale, 550*scale)
+    .setPosition(cX-220*scale, 500*scale)
 
     this.questionIcon
-    .setDepth(100)
+    .setDepth(151)
     .setScale(scale)
-    .setPosition(cX-145*scale, 550*scale)
+    .setPosition(cX-145*scale, 500*scale)
 
     //hit zone
 
@@ -586,12 +653,14 @@ export default class level1 extends Phaser.Scene
         //set up the final positions of each item
         let x1 = [cX+30*scale, cX+60*scale,cX+30*scale, cX+60*scale, cX+30*scale, cX+80*scale, cX+110*scale, cX+80*scale, cX+110*scale]
         let x2 = [cX+120*scale, cX+150*scale,cX+120*scale, cX+150*scale, cX+120*scale, cX+180*scale, cX+210*scale, cX+180*scale, cX+210*scale]
-        let x3 = [cX+260*scale, cX+230*scale,cX+260*scale, cX+240*scale, cX+270*scale, cX+240*scale, cX+270*scale, cX+250*scale, cX+280*scale]
+        let x3 = [cX+240*scale, cX+230*scale,cX+260*scale, cX+240*scale, cX+270*scale, cX+240*scale, cX+270*scale, cX+250*scale, cX+280*scale]
         this.xCoord = [x1,x2, x3]
         let y1 = [480*scale, 450*scale, 420*scale ,390*scale, 360*scale, 480*scale, 450*scale, 420*scale ,390*scale ]
         let y2 = [490*scale, 460*scale, 430*scale ,400*scale, 370*scale, 490*scale, 460*scale, 430*scale ,400*scale ]
         let y3 = [490*scale, 470*scale, 450*scale ,430*scale, 410*scale, 390*scale, 370*scale, 350*scale ,330*scale ]
         this.yCoord = [y1,y2, y3]
+
+        this.basketDestination = -2000
 
 
 //dock items

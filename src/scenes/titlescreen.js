@@ -32,6 +32,7 @@ preload()
     this.load.image('basket', './src/assets/Game/basket.png')
     this.load.image('list', './src/assets/Game/list.png')
 
+    this.load.audio('celebrate', './src/assets/Sounds/celebrate.mp3')
     this.load.audio('swish', './src/assets/Sounds/swish.mp3')
     this.load.audio('correct', './src/assets/Sounds/correct.mp3')
     this.load.audio('incorrect', './src/assets/Sounds/incorrect.wav')
